@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @Value("${server.port")
+    @Value("${server.port}")
     String port;
 
     @GetMapping("/")
