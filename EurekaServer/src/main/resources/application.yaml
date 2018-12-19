@@ -5,14 +5,14 @@ eureka:
   instance:
     hostname: localhost
   client:
-    #ÊµÀıÊÇ·ñÔÚeureka·şÎñÆ÷ÉÏ×¢²á×Ô¼ºµÄĞÅÏ¢ÒÔÌá¹©ÆäËû·şÎñ·¢ÏÖ,Ä¬ÈÏÎªtrue
+    #å®ä¾‹æ˜¯å¦åœ¨eurekaæœåŠ¡å™¨ä¸Šæ³¨å†Œè‡ªå·±çš„ä¿¡æ¯ä»¥æä¾›å…¶ä»–æœåŠ¡å‘ç°,é»˜è®¤ä¸ºtrue
     register-with-eureka: false
-    #´Ë¿Í»§¶ËÊÇ·ñ»ñÈ¡eureka·şÎñÆ÷×¢²á±íÉÏµÄ×¢²áĞÅÏ¢,Ä¬ÈÏÎªtrue
+    #æ­¤å®¢æˆ·ç«¯æ˜¯å¦è·å–eurekaæœåŠ¡å™¨æ³¨å†Œè¡¨ä¸Šçš„æ³¨å†Œä¿¡æ¯,é»˜è®¤ä¸ºtrue
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    #¿ªÆô×ÔÎÒ±£»¤Ä£Ê½
+    #å¼€å¯è‡ªæˆ‘ä¿æŠ¤æ¨¡å¼
     #enable-self-preservation: false
-    #ÇåÀíÎŞĞ§½Úµã,Ä¬ÈÏ60*1000ºÁÃë,¼´60Ãë
+    #æ¸…ç†æ— æ•ˆèŠ‚ç‚¹,é»˜è®¤60*1000æ¯«ç§’,å³60ç§’
     eviction-interval-timer-in-ms: 5000
