@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: eureka-provider
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true #从配置中心读取文件
+        service-id: config-server-eureka #服务名称，通过服务名称去 Eureka注册中心找服务
 
 eureka:
   instance:
@@ -13,3 +20,13 @@ eureka:
     registry-fetch-interval-seconds: 30
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+#关闭刷新安全认证
+#值是false的话，除开health接口还依赖endpoints.health.sensitive的配置外，
+#其他接口都不需要输入用户名和密码了
+# 刷新配置，在spring boot 2.x 之前1.x的management.security.enabled失效，新的配置为
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
