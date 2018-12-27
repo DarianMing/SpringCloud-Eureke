@@ -11,6 +11,11 @@ spring:
       discovery:
         enabled: true #从配置中心读取文件
         service-id: config-server-eureka #服务名称，通过服务名称去 Eureka注册中心找服务
+  rabbitmq:
+    host: 106.12.206.238
+    port: 5672
+    username: lm
+    password: 245220
 
 eureka:
   instance:
@@ -29,4 +34,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: bus-refresh
